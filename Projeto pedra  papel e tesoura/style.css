@@ -1,0 +1,24 @@
+h1{
+    text-align: center;
+}
+
+.player-options img{
+    max-width: 200px;
+    opacity: 0.3;
+    cursor: pointer;
+    width: 100%;
+    
+}
+
+.enemy-options img{
+    max-width: 200px;
+    opacity: 0.3;
+    cursor: pointer;
+    width: 100%;
+}
+
+.align{
+    display: flex;
+    background-color: whitesmoke
+}
+
