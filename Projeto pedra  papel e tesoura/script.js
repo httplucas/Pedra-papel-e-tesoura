@@ -3,6 +3,29 @@ var elementos = document.querySelectorAll('.player-options div > img')
 var playerOpt = "";
 var inimigoOpt = "";
 const enemyOptions = document.querySelectorAll('.enemy-options div');
+let vencedor = document.querySelector('.vencedor');
+
+//função para validar vitoria
+function validarVitoria(){
+
+
+    if(playerOpt == "papel")
+    {
+        if(inimigoOpt == "papel"){
+            //empate
+            vencedor.innerHTML = "O jogo foi empatado";
+        }
+        else if(inimigoOpt == "tesoura"){
+            //inimigo ganhou
+            vencedor.innerHTML = "Você Perdeu!!!";
+        }
+        else if(inimigoOpt == "pedra"){
+            //ganhou
+            vencedor.innerHTML = "Você Ganhou!!!";
+        }
+    }
+}
+
 //função para alterar opacidade da escolha inimiga
 function resetInimigo(){
 
@@ -50,4 +73,8 @@ for (var i =0; i < elementos.length; i++){
         //alert(playerOpt);
         
     });
+
+    
+
+    validarVitoria();
 }
